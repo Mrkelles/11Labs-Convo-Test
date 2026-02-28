@@ -19,7 +19,7 @@ export function Conversation() {
 
       // Start the conversation with your agent
       await conversation.startSession({
-        agentId: 'agent_01jxq06nqjfxyvjsacf59r4xsz', // Replace with your agent ID
+        agentId: process.env.NEXT_PUBLIC_AGENT_ID as string, // Replace with your agent ID
       });
 
     } catch (error) {
